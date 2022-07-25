@@ -1,7 +1,7 @@
 const BASE_URL = 'https://pixabay.com/api/';
 const KEY = '26728738-d599205e790670b2a20ac6b2d';
 const perPage = 12;
-
+const api = { fetchImages };
 function fetchImages(query, page = 1) {
   return fetch(
     `${BASE_URL}?q=${query}&page=${page}&key=${KEY}&image_type=photo&orientation=horizontal&per_page=${perPage}`
